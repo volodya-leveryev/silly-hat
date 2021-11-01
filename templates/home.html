@@ -1,0 +1,23 @@
+{% extends 'page.html' %}
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <h1>Добро пожаловать!</h1>
+
+            <h2>Расписания групп</h2>
+            {% for edu_group in edu_groups %}
+                <a href="{{ url_for('schedule_group', edu_group_id=edu_group.id) }}">Группа</a>
+            {% endfor %}
+
+            <h2>Расписания преподавателей</h2>
+            {% for person in persons %}
+                <a href="{{ url_for('schedule_teacher', person_id=person.id) }}">Преподаватель</a>
+            {% endfor %}
+
+            <h2>Расписания аудиторий</h2>
+            {% for room in rooms %}
+                <a href="{{ url_for('schedule_room', room_id=room.id) }}">Аудитория</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

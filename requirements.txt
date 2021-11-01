@@ -1,0 +1,6 @@
+authlib
+flask
+flask-alembic
+flask_sqlalchemy
+pytest
+requests

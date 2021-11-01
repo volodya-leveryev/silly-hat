@@ -1,0 +1,8 @@
+# IDE settings
+.idea/
+
+# Config files
+*.cfg
+
+# Compiled files
+*.pyc
